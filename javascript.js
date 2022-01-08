@@ -55,4 +55,6 @@ function game() {
     }
     
 }
+
+// call the funtion to play the game
 game();
