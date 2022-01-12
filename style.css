@@ -23,6 +23,10 @@
     gap: 25px 25px;
 }
 
+#resultDisplay {
+    margin: 15px;
+}
+
 .buttons {
     font-size: 35px;
 }
