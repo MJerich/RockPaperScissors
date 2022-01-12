@@ -13,7 +13,17 @@
     gap: 15px 15px;
 }
 
-.selectButton {
+.scoreWrapper {
+    display: flex;
+    gap: 15px 15px;
+}
+
+.picksWrapper {
+    display: flex;
+    gap: 25px 25px;
+}
+
+.buttons {
     font-size: 35px;
 }
 

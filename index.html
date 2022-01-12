@@ -2,20 +2,32 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style.css">
+    <script src="javascript.js" defer></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <script src="javascript.js"></script>
     <div class="mainWrapper">
         <h1 style="text-align: center;">Let's play Rock, Paper, Scissors. First to 5 wins.</h1>
         <ul class="buttonWrapper">
-            <li><button class="selectButton">🪨</button></li>
-            <li><button class="selectButton">📜</button></li>
-            <li><button class="selectButton">✂️</button></li>
+            <li><button id="Rock" class="buttons">⛰️</button></li>
+            <li><button id="Paper" class="buttons">📜</button></li>
+            <li><button id="Scissors" class="buttons">✂️</button></li>
         </ul>
+        <div class="picksWrapper">
+            <div>You picked: <span class="pickSpan" id="playerPicked"></span></div>
+            <div>Computer picked: <span class="pickSpan" id="cpuPicked"></span></div>
+        </div>
+        <div class="scoreWrapper">
+            <p class="scoreDisplay">
+                You: <span id="playerScore"></span>
+            </p>
+            <p class="scoreDisplay">
+                Computer: <span id="cpuScore"></span>
+            </p>
+        </div>
     </div>
 </body>
 </html>
