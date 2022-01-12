@@ -13,7 +13,7 @@ function game() {
     while (playerScore<5 && cpuScore<5) {
 
         // Get user pick
-        let userPick = prompt('Rock, Paper, or Scissors?').toLowerCase();
+        //let userPick = prompt('Rock, Paper, or Scissors?').toLowerCase();
 
         // Function for randomizing computers pick
         function computerPlay() {

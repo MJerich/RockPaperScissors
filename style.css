@@ -1,0 +1,22 @@
+.mainWrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.buttonWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px 15px;
+}
+
+.selectButton {
+    font-size: 35px;
+}
+
+ul {
+    list-style-type: none;
+}
