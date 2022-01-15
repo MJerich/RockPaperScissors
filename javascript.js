@@ -44,6 +44,20 @@ buttons.forEach((button) => {
             document.getElementById("playerPicked").innerHTML = '✂️';
         }
 
+        else if (
+            (playerScore == 4) && (userPick == 'Rock')
+        ) {
+            let cpuPick = 'Paper'
+        } else if (
+            (playerScore == 4) && (userPick == 'Paper')
+        ) {
+            let cpuPick = 'Scissors'
+        } else if (
+            (playerScore == 4) && (userPick == 'Scissors')
+        ) {
+            let cpuPick = 'Rock'
+        }
+
         // Display the computers pick
         if (cpuPick == 'Rock'){
             document.getElementById("cpuPicked").innerHTML = '⛰️';
@@ -53,11 +67,39 @@ buttons.forEach((button) => {
             document.getElementById("cpuPicked").innerHTML = '✂️';
         }
 
+        
+        // if statment for a tie
         if (userPick == cpuPick){
 
             console.log("tie");
             document.getElementById("resultDisplay").innerHTML = 'You Tied';
-        }   else if (
+        }   
+
+            // Make the user always lose if they are on game point
+            else if (
+                (playerScore == 4) && (userPick == 'Rock')
+            ) {
+                document.getElementById("cpuPicked").innerHTML = '📜';
+                console.log('You Lose')
+                document.getElementById("resultDisplay").innerHTML = 'You Lose';
+                cpuScore++;
+            } else if (
+                (playerScore == 4) && (userPick == 'Paper')
+            ) {
+                document.getElementById("cpuPicked").innerHTML = '✂️';
+                console.log('You Lose')
+                document.getElementById("resultDisplay").innerHTML = 'You Lose';
+                cpuScore++;
+            } else if (
+                (playerScore == 4) && (userPick == 'Scissors')
+            ) {
+                document.getElementById("cpuPicked").innerHTML = '⛰️';
+                console.log('You Lose')
+                document.getElementById("resultDisplay").innerHTML = 'You Lose';
+                cpuScore++;
+            }
+            // if statment for the player lose
+            else if (
             (userPick == 'Rock') && (cpuPick == 'Paper') ||
             (userPick =='Paper') && (cpuPick == 'Scissors') ||
             (userPick == 'Scissors') && (cpuPick == 'Rock')
@@ -65,7 +107,9 @@ buttons.forEach((button) => {
             console.log('You Lose')
             document.getElementById("resultDisplay").innerHTML = 'You Lose';
             cpuScore++;
-        }   else if (
+        }   
+            // if statment for the player win
+            else if (
             (userPick == 'Rock') && (cpuPick == 'Scissors') ||
             (userPick == 'Paper') && (cpuPick == 'Rock') ||
             (userPick == 'Scissors') && (cpuPick == 'Paper')
@@ -84,10 +128,10 @@ buttons.forEach((button) => {
 
         setTimeout(() => {
             if (playerScore == 5){
-                alert('YOU WIN! CLICK "OK" TO PLAY AGAIN.');
+                alert('YOU WIN!');
                 window.location.reload();
             } else if (cpuScore == 5){
-                alert('Sorry, you lose. Click "ok" to play again.');
+                alert('Sorry, you lose.');
                 window.location.reload();
             }
         }, 20);
